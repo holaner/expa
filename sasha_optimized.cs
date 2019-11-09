@@ -26,27 +26,27 @@ public class Program
 	}
 
 	public static bool isInSectorD(double x, double y)
-  {
+	{
 		return x >= 0 && y >= 0 && isPositionUnderTheLine(x, y) && !isPositionInsideTheParabola(x, y);
 	}
 
 	public static bool isPositionUnderTheLine(double x, double y)
-  {
+	{
 		return line(x) >= y;
 	}
 
 	public static bool isPositionInsideTheParabola(double x, double y)
-  {
+	{
 		return !(parabola(x) > y);
 	}
 
 	public static bool isInSectorC(double x, double y)
-  {
+	{
 		return isPositionUnderTheLine(x, y) && isPositionInsideTheParabola(x, y);
 	}
 
 	public static bool isInTarget(double x, double y)
-  {
+	{
 		return isInSectorC(x, y) || isInSectorD(x, y);
 	}
 }
