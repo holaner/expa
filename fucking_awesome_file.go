@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
+    log.Println("пошли за пивом")
     log.Println("i am awesome! no! very awesome!")
     http.HandleFunc("/", index)
     http.ListenAndServe(":80", nil)
